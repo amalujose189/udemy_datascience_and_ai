@@ -86,5 +86,5 @@ evaluation_model(loaded_model,test_loader) #evaluate the loaded model on the tes
 #update optimizer for the loaded model
 optimizer=torch.optim.Adam(loaded_model.parameters(),lr=0.001) #create a new optimizer for the loaded model parameters  
 train(loaded_model,train_loader,criterion,optimizer) #continue training the loaded model for additional epochs
-evaluation_model
+evaluation_model(loaded_model,test_loader) #evaluate the loaded model after additional training to see if performance improves
 
