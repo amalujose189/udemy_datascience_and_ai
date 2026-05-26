@@ -30,6 +30,9 @@ while True:
     # Render results on frame
     output_frame = results.render()[0]
     
+    # Convert from RGB to BGR for OpenCV display
+    output_frame = cv2.cvtColor(output_frame, cv2.COLOR_RGB2BGR)
+    
     # Display the frame with detections
     cv2.imshow('Drowsiness Detection', output_frame)
     
